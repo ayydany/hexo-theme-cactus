@@ -1,5 +1,8 @@
 # Cactus
 
+> **Note:** This is a personal fork of [probberechts/hexo-theme-cactus](https://github.com/probberechts/hexo-theme-cactus).  
+> I plan to use this repository to customize Cactus further to my own liking.
+
 A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal website.
 
 :cactus: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
