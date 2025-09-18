@@ -35,14 +35,14 @@
     <% if (name) { %>
       <h1 class="profile-name" itemprop="name"><%= name %></h1>
     <% } %>
-    <% if (title) { %>
-      <p class="profile-title" itemprop="jobTitle"><%= title %></p>
+    <% if (location) { %>
+      <p class="profile-location" itemprop="homeLocation"><i class="fa-solid fa-location-dot"></i> <span><%= location %></span></p>
     <% } %>
     <% if (tagline) { %>
       <p class="profile-tagline"><%= tagline %></p>
     <% } %>
-    <% if (location) { %>
-      <p class="profile-location" itemprop="homeLocation"><i class="fa-solid fa-location-dot"></i> <span><%= location %></span></p>
+    <% if (title) { %>
+      <p class="profile-title" itemprop="jobTitle"><%= title %></p>
     <% } %>
     <% if (intro) { %>
       <div class="profile-intro"><%- markdown(intro) %></div>
