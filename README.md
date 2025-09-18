@@ -200,6 +200,45 @@ social_links:
 
 where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands), and LABEL is an optional value used as a title attribute on the link (NAME value is used if LABEL is missing).
 
+### Profile page
+
+Use the new profile layout when you want a lightweight "about" page focused on you instead of your posts.
+
+1. Create a page: `hexo new page about`.
+2. Edit `source/about/index.md` and set the front-matter to use the layout:
+
+   ```yaml
+   ---
+   title: About
+   layout: profile
+   ---
+   
+   Optional long-form content goes here.
+   ```
+
+3. Fill in the `profile_page` section in the theme `_config.yml`:
+
+   ```yaml
+   profile_page:
+     name: Jane Doe
+     title: Staff Software Engineer
+     tagline: Building resilient platforms and delightful developer tools.
+     location: Amsterdam, NL
+     intro: >
+       I specialise in developer experience, backend systems, and inclusive teams.
+     avatar:
+       url: /images/avatar.jpg
+       gravatar: false
+       alt: Portrait of Jane Doe
+     links:
+       - icon: github
+         link: https://github.com/janedoe
+       - icon: linkedin
+         link: https://www.linkedin.com/in/janedoe
+   ```
+
+   When `links` is omitted the layout will fall back to the global `social_links` configuration.
+
 ### Copyright years
 
 By default, Cactus will use current year in your copyright year information.

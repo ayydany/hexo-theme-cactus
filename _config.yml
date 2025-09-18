@@ -136,6 +136,25 @@ colorscheme: dark
 page_width: 48
 
 ##############################################################################
+# Profile Page
+##############################################################################
+
+# Settings used by the optional profile/show layout.
+# Create a page with `hexo new page about` and set `layout: profile` in the
+# front-matter to use this presentation.
+profile_page:
+  name: # falls back to `author` or site title when empty
+  title: # e.g. "Software Developer"
+  tagline: # one-line elevator pitch shown under the title
+  location: # optional location label
+  intro: # rendered as Markdown above custom page content
+  avatar:
+    url: /images/avatar.jpg
+    gravatar: false
+    alt: # custom alternative text for the avatar image
+  links: [] # defaults to the theme's social_links when left empty
+
+##############################################################################
 # Miscellaneous
 ##############################################################################
 

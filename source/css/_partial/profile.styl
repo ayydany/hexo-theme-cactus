@@ -1,0 +1,113 @@
+.profile-page
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 3rem 1rem 4rem
+  text-align: center
+
+  .profile-card
+    max-width: 28rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .profile-avatar
+    width: 10rem
+    height: 10rem
+    margin-bottom: 1.5rem
+    border-radius: 50%
+    overflow: hidden
+    border: 3px solid lighten($color-border, 5%)
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18)
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+
+  .profile-name
+    margin: 0
+    font-size: 2.25rem
+    font-family: $font-family-headings
+
+  .profile-title
+    margin: 0.75rem 0 0
+    font-size: 1.25rem
+    color: lighten($color-text, 20%)
+
+  .profile-tagline
+    margin: 0.5rem 0 0
+    font-size: 1rem
+    color: lighten($color-text, 35%)
+
+  .profile-location
+    display: inline-flex
+    align-items: center
+    margin: 1rem 0 0
+    font-size: 0.95rem
+    color: lighten($color-text, 40%)
+
+    i
+      margin-right: 0.5rem
+
+  .profile-intro
+    margin-top: 1.5rem
+    font-size: 1rem
+    color: lighten($color-text, 25%)
+
+    p:last-child
+      margin-bottom: 0
+
+  .profile-links
+    margin-top: 2rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 1rem
+
+    .profile-link
+      width: 3rem
+      height: 3rem
+      border-radius: 50%
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      background-color: rgba($color-link, 0.12)
+      color: $color-link
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease
+
+      &:hover
+        transform: translateY(-3px)
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2)
+        background-color: rgba($color-link, 0.3)
+
+      i
+        font-size: 1.25rem
+
+  .profile-content
+    max-width: 42rem
+    margin: 3rem auto 0
+    text-align: left
+
+    a
+      underline(4px, $color-link)
+
+    p:first-child
+      margin-top: 0
+
+@media (max-width: 480px)
+  .profile-page
+    padding: 2.5rem 0 3rem
+
+    .profile-avatar
+      width: 8.5rem
+      height: 8.5rem
+
+    .profile-name
+      font-size: 2rem
+
+    .profile-title
+      font-size: 1.1rem
+*** End
