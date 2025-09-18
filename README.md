@@ -117,8 +117,8 @@ This will override the default black colorscheme in `themes/cactus/_config.yml`.
 
 ### Color scheme
 
-Currently, this theme is delivered with four color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
-[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/) and [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/). Set your preferred color scheme in the `_config.yml` file.
+Currently, this theme is delivered with five color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
+[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/), [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/) and the new Catppuccin-inspired [catppuccin-mocha](https://github.com/catppuccin/catppuccin). Set your preferred color scheme in the `_config.yml` file.
 
 ```yml
 colorscheme: light
@@ -222,7 +222,6 @@ Use the new profile layout when you want a lightweight "about" page focused on y
    profile_page:
      name: Jane Doe
      title: Staff Software Engineer
-     tagline: Building resilient platforms and delightful developer tools.
      location: Amsterdam, NL
      intro: >
        I specialise in developer experience, backend systems, and inclusive teams.

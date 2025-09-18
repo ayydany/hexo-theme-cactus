@@ -3,7 +3,6 @@
   const fallbackName = config.author || config.title;
   const name = profile.name || fallbackName;
   const title = profile.title || profile.role;
-  const tagline = profile.tagline || profile.subtitle;
   const location = profile.location;
   const intro = profile.intro;
   const links = (profile.links && profile.links.length) ? profile.links : theme.social_links;
@@ -40,9 +39,6 @@
     <% } %>
     <% if (location) { %>
       <p class="profile-location" itemprop="homeLocation"><i class="fa-solid fa-location-dot"></i> <span><%= location %></span></p>
-    <% } %>
-    <% if (tagline) { %>
-      <p class="profile-tagline"><%= tagline %></p>
     <% } %>
     <% if (intro) { %>
       <div class="profile-intro"><%- markdown(intro) %></div>
