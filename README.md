@@ -117,8 +117,8 @@ This will override the default black colorscheme in `themes/cactus/_config.yml`.
 
 ### Color scheme
 
-Currently, this theme is delivered with four color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
-[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/) and [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/). Set your preferred color scheme in the `_config.yml` file.
+Currently, this theme is delivered with five color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
+[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/), [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/) and the new Catppuccin-inspired [catppuccin-mocha](https://github.com/catppuccin/catppuccin). Set your preferred color scheme in the `_config.yml` file.
 
 ```yml
 colorscheme: light
@@ -199,6 +199,51 @@ social_links:
 ```
 
 where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands), and LABEL is an optional value used as a title attribute on the link (NAME value is used if LABEL is missing).
+
+### Profile page
+
+Use the new profile layout when you want a lightweight "about" page focused on you instead of your posts.
+
+1. Create a page: `hexo new page about`.
+2. Edit `source/about/index.md` and set the front-matter to use the layout:
+
+   ```yaml
+   ---
+   title: About
+   layout: profile
+   ---
+   
+   Optional long-form content goes here.
+   ```
+
+3. Fill in the `profile_page` section in the theme `_config.yml`:
+
+   ```yaml
+   profile_page:
+     name: Jane Doe
+     title: Staff Software Engineer
+     width: 30rem
+     content_width: 44rem
+     location: Amsterdam, NL
+     intro: >
+       I specialise in developer experience, backend systems, and inclusive teams.
+     avatar:
+       url: /images/avatar.jpg
+       gravatar: false
+       alt: Portrait of Jane Doe
+     links:
+       - icon: github
+         link: https://github.com/janedoe
+         style: brands
+       - icon: linkedin
+         link: https://www.linkedin.com/in/janedoe
+         style: brands
+       - icon: envelope
+         link: mailto:jane@example.com
+         style: solid
+  ```
+
+  `width` accepts any valid CSS length and controls the profile card's maximum width; `content_width` lets you pick a different constraint for the long-form page body and defaults to `width` when omitted. Each link supports an optional `style` (or `icon_style`) field so you can choose Font Awesome families such as `brands`, `solid`, `regular`, `light`, `thin`, `duotone`, or even supply a raw class string like `fa-sharp fa-solid`. When `links` is omitted the layout will fall back to the global `social_links` configuration.
 
 ### Copyright years
 

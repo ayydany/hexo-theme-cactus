@@ -128,15 +128,37 @@ favicon:
 # highlight: rainbow
 
 # Set the color scheme.
-# Available color schemes are 'dark', 'light', 'classic' and 'white'.
+# Available color schemes are 'dark', 'light', 'classic', 'white' and 'catppuccin-mocha'.
 # Alternatively, add your own custom color scheme to source/css/_colors.
-colorscheme: dark
+colorscheme: catppuccin-mocha
 
 # Maximal width of the page in rem units.
 page_width: 48
 
 ##############################################################################
-# Miscellaneous
+# Profile Page
+##############################################################################
+
+# Settings used by the optional profile/show layout.
+# Create a page with `hexo new page about` and set `layout: profile` in the
+# front-matter to use this presentation.
+profile_page:
+  name: # falls back to `author` or site title when empty
+  title: # e.g. "Software Developer"
+  width: # optional max width for the profile card (e.g. 32rem or 520px)
+  content_width: # optional max width for long-form content; falls back to `width`
+  location: # optional location label
+  intro: # rendered as Markdown above custom page content
+  avatar:
+    url: /images/avatar.jpg
+    gravatar: false
+    alt: # custom alternative text for the avatar image
+  links: [] # defaults to the theme's social_links when left empty
+  # Link objects support icon, link, label, target, rel, and an optional style/icon_style
+  # field to switch Font Awesome prefixes (e.g. brands, solid, regular).
+
+##############################################################################
+# Miscellaneous 
 ##############################################################################
 
 # Enable or disable the RSS feed.
