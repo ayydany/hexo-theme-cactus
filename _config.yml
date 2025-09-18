@@ -156,7 +156,7 @@ avatar:
 links: [] # defaults to the theme's social_links when left empty
 
 ##############################################################################
-# Miscellaneous
+# Miscellaneous 
 ##############################################################################
 
 # Enable or disable the RSS feed.
