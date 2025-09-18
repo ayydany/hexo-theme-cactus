@@ -145,13 +145,15 @@ page_width: 48
 profile_page:
   name: # falls back to `author` or site title when empty
   title: # e.g. "Software Developer"
+  width: # optional max width for the profile card (e.g. 32rem or 520px)
+  content_width: # optional max width for long-form content; falls back to `width`
   location: # optional location label
   intro: # rendered as Markdown above custom page content
-  avatar:
-    url: /images/avatar.jpg
-    gravatar: false
-    alt: # custom alternative text for the avatar image
-  links: [] # defaults to the theme's social_links when left empty
+avatar:
+  url: /images/avatar.jpg
+  gravatar: false
+  alt: # custom alternative text for the avatar image
+links: [] # defaults to the theme's social_links when left empty
 
 ##############################################################################
 # Miscellaneous

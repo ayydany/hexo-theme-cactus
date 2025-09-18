@@ -1,4 +1,6 @@
 .profile-page
+  --profile-card-max-width: 28rem
+  --profile-content-max-width: 42rem
   display: flex
   flex-direction: column
   align-items: center
@@ -6,7 +8,7 @@
   text-align: center
 
   .profile-card
-    max-width: 28rem
+    max-width: var(--profile-card-max-width)
     width: 100%
     display: flex
     flex-direction: column
@@ -82,7 +84,7 @@
         font-size: 1.25rem
 
   .profile-content
-    max-width: 42rem
+    max-width: var(--profile-content-max-width)
     margin: 3rem auto 0
     text-align: left
 
