@@ -33,19 +33,40 @@
     font-family: $font-family-headings
 
   .profile-title
-    margin: 0.75rem 0 0
+    margin: 0.35rem 0 0
     font-size: 1.25rem
     color: lighten($color-text, 20%)
 
   .profile-tagline
-    margin: 0.5rem 0 0
+    position: relative
+    margin: 1.25rem 0 0
+    padding: 0.85rem 1.5rem
     font-size: 1rem
-    color: lighten($color-text, 35%)
+    font-style: italic
+    color: lighten($color-text, 30%)
+    background-color: rgba($color-accent-1, 0.08)
+    border-radius: 0.75rem
+
+    &::before
+      content: '“'
+      position: absolute
+      left: 0.8rem
+      top: 0.15rem
+      font-size: 2rem
+      color: rgba($color-accent-1, 0.6)
+
+    &::after
+      content: '”'
+      position: absolute
+      right: 0.8rem
+      bottom: -0.1rem
+      font-size: 2rem
+      color: rgba($color-accent-1, 0.6)
 
   .profile-location
     display: inline-flex
     align-items: center
-    margin: 0.75rem 0 0
+    margin: 0.85rem 0 0
     font-size: 0.95rem
     color: lighten($color-text, 40%)
 
@@ -74,14 +95,14 @@
       display: inline-flex
       align-items: center
       justify-content: center
-      background-color: rgba($color-accent-1, 0.12)
-      color: $color-accent-1
+      background-color: rgba($color-link, 0.12)
+      color: $color-link
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease
 
       &:hover
         transform: translateY(-3px)
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2)
-        background-color: rgba($color-accent-1, 0.3)
+        background-color: rgba($color-link, 0.3)
 
       i
         font-size: 1.25rem
@@ -92,7 +113,7 @@
     text-align: left
 
     a
-      underline(4px, $color-accent-1)
+      underline(4px, $color-link)
 
     p:first-child
       margin-top: 0
