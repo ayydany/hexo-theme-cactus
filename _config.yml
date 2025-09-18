@@ -149,11 +149,13 @@ profile_page:
   content_width: # optional max width for long-form content; falls back to `width`
   location: # optional location label
   intro: # rendered as Markdown above custom page content
-avatar:
-  url: /images/avatar.jpg
-  gravatar: false
-  alt: # custom alternative text for the avatar image
-links: [] # defaults to the theme's social_links when left empty
+  avatar:
+    url: /images/avatar.jpg
+    gravatar: false
+    alt: # custom alternative text for the avatar image
+  links: [] # defaults to the theme's social_links when left empty
+  # Link objects support icon, link, label, target, rel, and an optional style/icon_style
+  # field to switch Font Awesome prefixes (e.g. brands, solid, regular).
 
 ##############################################################################
 # Miscellaneous 

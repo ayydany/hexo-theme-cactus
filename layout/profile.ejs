@@ -67,6 +67,35 @@
              const target = linkObj.target || (isMail ? '_self' : '_blank');
              const rel = linkObj.rel || (target === '_blank' ? 'noopener' : '');
              const finalHref = (isMail || isRss) ? href : url_for(href);
+             const rawStyle = (linkObj.style || linkObj.icon_style || linkObj.prefix || '').trim();
+             const styleMap = {
+               brands: 'fa-brands',
+               brand: 'fa-brands',
+               solid: 'fa-solid',
+               regular: 'fa-regular',
+               light: 'fa-light',
+               thin: 'fa-thin',
+               duotone: 'fa-duotone',
+               'sharp-solid': 'fa-sharp fa-solid',
+               'sharp-regular': 'fa-sharp fa-regular',
+               'sharp-light': 'fa-sharp fa-light',
+               'sharp-thin': 'fa-sharp fa-thin'
+             };
+             let iconStyleClasses = 'fa-brands';
+             if (rawStyle) {
+               if (rawStyle.includes(' ')) {
+                 iconStyleClasses = rawStyle;
+               } else {
+                 const normalized = rawStyle.replace(/^fa-/i, '').toLowerCase();
+                 if (styleMap[normalized]) {
+                   iconStyleClasses = styleMap[normalized];
+                 } else if (/^fa-/i.test(rawStyle)) {
+                   iconStyleClasses = rawStyle;
+                 } else {
+                   iconStyleClasses = `fa-${normalized}`;
+                 }
+               }
+             }
         %>
           <a class="profile-link" href="<%- finalHref %>"<% if (target) { %> target="<%- target %>"<% } %><% if (rel) { %> rel="<%- rel %>"<% } %> aria-label="<%- label %>"<% if (!isMail) { %> itemprop="sameAs"<% } %>>
             <% if (isMail) { %>
@@ -74,7 +103,7 @@
             <% } else if (isRss) { %>
               <i class="fa-solid fa-rss"></i>
             <% } else { %>
-              <i class="fa-brands fa-<%= icon %>"></i>
+              <i class="<%= iconStyleClasses %> fa-<%= icon %>"></i>
             <% } %>
           </a>
         <% }) %>

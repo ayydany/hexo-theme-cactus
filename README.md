@@ -234,11 +234,16 @@ Use the new profile layout when you want a lightweight "about" page focused on y
      links:
        - icon: github
          link: https://github.com/janedoe
+         style: brands
        - icon: linkedin
          link: https://www.linkedin.com/in/janedoe
+         style: brands
+       - icon: envelope
+         link: mailto:jane@example.com
+         style: solid
   ```
 
-  `width` accepts any valid CSS length and controls the profile card's maximum width; `content_width` lets you pick a different constraint for the long-form page body and defaults to `width` when omitted. When `links` is omitted the layout will fall back to the global `social_links` configuration.
+  `width` accepts any valid CSS length and controls the profile card's maximum width; `content_width` lets you pick a different constraint for the long-form page body and defaults to `width` when omitted. Each link supports an optional `style` (or `icon_style`) field so you can choose Font Awesome families such as `brands`, `solid`, `regular`, `light`, `thin`, `duotone`, or even supply a raw class string like `fa-sharp fa-solid`. When `links` is omitted the layout will fall back to the global `social_links` configuration.
 
 ### Copyright years
 
