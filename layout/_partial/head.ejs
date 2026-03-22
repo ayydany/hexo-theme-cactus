@@ -10,8 +10,11 @@
   <%- open_graph({ image: thumbnail(page), fb_app_id:
   theme.open_graph.fb_app_id, fb_admins: theme.open_graph.fb_admins, twitter_id:
   theme.open_graph.twitter_id, google_plus: theme.open_graph.google_plus, }) %>
-  <%- meta(page) %> <% if (theme.favicon) { %> <% if (theme.favicon.desktop) {
-  %> <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) &&
+  <%- meta(page) %>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <% if (theme.favicon) { %> <% if (theme.favicon.desktop) { %> <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) &&
   theme.favicon.desktop.gravatar) { %> <% if (theme.gravatar.email) { %>
   <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 48) %>" />
   <% } else { %>
