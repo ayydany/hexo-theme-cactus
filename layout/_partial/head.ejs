@@ -68,7 +68,8 @@
   />
   <% } %> <% } %> <% } %>
   <!-- title -->
-  <title><%= page_title() %></title>
+  <% var title_prefix = theme.title_prefix || "ayydany" %>
+  <title><% if (is_home()) { %><%= title_prefix %> // Daniel Carmo<% } else { %><%= title_prefix %> // <%= page_title() %><% } %></title>
   <!-- async scripts -->
   <%- partial('./google_analytics.ejs') %> <%- partial('./umami_analytics.ejs')
   %>
